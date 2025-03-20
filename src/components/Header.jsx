@@ -13,7 +13,7 @@ const Header = () => {
           <a href="#" className="hover:text-gray-500">Productos</a>
           <a href="#" className="hover:text-gray-500">Sobre nosotros</a>
           <a href="#" className="hover:text-gray-500">Contacto</a>
-          <div  className="bg-black hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md"  ><a href="#" className="hover:text-gray-500 ">Tienda</a></div>
+          <div  className="bg-black hover:bg-blue-950 text-white font-bold py-2 px-4 rounded-md"  ><a href="#">Tienda</a></div>
         </nav>
         
         <div className="md:hidden">
@@ -30,7 +30,7 @@ const Header = () => {
           <a href="#" className="block py-2 hover:text-gray-500">Productos</a>
           <a href="#" className="block py-2 hover:text-gray-500">Sobre nosotros</a>
           <a href="#" className="block py-2 hover:text-gray-500">Contacto</a>
-          <div className="bg-black hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-r-md" ><a href="#" className="block py-2 hover:text-gray-500">Tienda</a></div>
+          <div className="bg-black hover:bg-blue-950 text-white font-bold py-2 px-4 rounded-r-md" ><a href="#" className="block py-2 hover:text-gray-500">Tienda</a></div>
         </div>
         
       )}
