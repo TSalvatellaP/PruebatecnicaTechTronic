@@ -1,6 +1,6 @@
-import Categories from "./daughters/Categories";
-import SearchBox from "./daughters/SearchBox";
-import WeatherWidget from "./daughters/WeatherWidget";
+import Categories from "./widget/Categories";
+import SearchBox from "./widget/SearchBox";
+import WeatherWidget from "./widget/WeatherWidget";
 
 const Sidebar = () => {
   const categories = [
