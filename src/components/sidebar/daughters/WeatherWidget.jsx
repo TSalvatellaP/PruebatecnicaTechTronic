@@ -1,7 +1,6 @@
 
 const Weather = () =>{
 
-
 return (
  <div className="md:col-span-1">
     <div className="bg-blue-950 shadow-md rounded-md p-6">

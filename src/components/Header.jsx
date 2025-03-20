@@ -30,7 +30,7 @@ const Header = () => {
           <a href="#" className="block py-2 hover:text-gray-500">Productos</a>
           <a href="#" className="block py-2 hover:text-gray-500">Sobre nosotros</a>
           <a href="#" className="block py-2 hover:text-gray-500">Contacto</a>
-          <div className="bg-black hover:bg-blue-950 text-white font-bold py-2 px-4 rounded-r-md" ><a href="#" className="block py-2 hover:text-gray-500">Tienda</a></div>
+          <div className="bg-black w-20 h-10 hover:bg-blue-950 text-white font-bold py-2 px-4 rounded-md flex justify-center items-center" ><a href="#" className="block py-2 hover:text-gray-500">Tienda</a></div>
         </div>
         
       )}
