@@ -1,4 +1,4 @@
-
+import Button from './Button';
 
 const ArticleList = () => {
   const articles = [
@@ -22,8 +22,8 @@ const ArticleList = () => {
             </article>
           ))}
         </div>
-       
       </div>
+      <Button/>
     </section>
   );
 };

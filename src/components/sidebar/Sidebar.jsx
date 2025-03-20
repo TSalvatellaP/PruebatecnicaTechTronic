@@ -1,4 +1,6 @@
 import Categories from "./daughters/Categories";
+import SearchBox from "./daughters/SearchBox";
+import WeatherWidget from "./daughters/WeatherWidget";
 
 const Sidebar = () => {
   const categories = [
@@ -10,7 +12,8 @@ const Sidebar = () => {
 
   return (
     <aside className="space-y-8">
-      {/* Categorías */}
+      <SearchBox/>
+      <WeatherWidget/>
       <Categories categories={categories} />
     </aside>
   );
