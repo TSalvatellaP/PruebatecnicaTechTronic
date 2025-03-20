@@ -1,6 +1,6 @@
 import { CiSearch } from "react-icons/ci";
 
-const SearchBox = () => {
+function SearchBox() {
   return (
     <div className="md:col-span-1">
       <div className="bg-white shadow-md rounded-md p-6">

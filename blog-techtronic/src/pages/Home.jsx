@@ -3,7 +3,7 @@ import Footer from '../components/Footer';
 import ArticleList from '../components/postList/ArticleList';
 import Sidebar from '../components/sidebar/Sidebar';
 
-const Home = () => {
+function Home() {
 
     return(
       <div className="flex flex-col min-h-screen">

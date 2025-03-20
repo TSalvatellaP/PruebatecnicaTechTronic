@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Categories = ({ categories }) => {
+function Categories({ categories }) {
   return (
     <div className="bg-white p-4 rounded-lg shadow-md">
       <h2 className="text-xl font-bold mb-4">Categorías</h2>

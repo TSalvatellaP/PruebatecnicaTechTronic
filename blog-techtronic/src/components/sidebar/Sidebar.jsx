@@ -2,7 +2,7 @@ import Categories from "./widget/Categories";
 import SearchBox from "./widget/SearchBox";
 import WeatherWidget from "./widget/WeatherWidget";
 
-const Sidebar = () => {
+function Sidebar() {
   const categories = [
     { name: "Smartphones", count: 24 },
     { name: "Portátiles & Ordenadores", count: 18 },

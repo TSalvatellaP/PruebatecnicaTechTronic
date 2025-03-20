@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const Header = () => {
+function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (

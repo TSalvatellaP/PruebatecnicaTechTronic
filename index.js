@@ -1,18 +1,14 @@
-// Fichero src/index.js
-
-// Importamos los dos módulos de NPM necesarios para trabajar
 const express = require('express');
 const cors = require('cors');
 require ('dotenv').config();
 
-// Creamos el servidor
 const server = express();
 
-// Configuramos el servidor
+
 server.use(cors());
 server.use(express.json());
 
-// Arrancamos el servidor en el puerto 3000
+
 const serverPort = 3000;
 server.listen(serverPort, () => {
   console.log(`Server listening at http://localhost:${serverPort}`);
@@ -35,7 +31,7 @@ function clearRecord(json){
     }
 };
 
-// Escribimos los endpoints que queramos
+//ENDPOINTS
 server.get('/api/weather/:country/:city', async(req, res) => {
     const city = req.params.city.toLocaleLowerCase();
     const country = req.params.country.toLocaleLowerCase();
