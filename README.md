@@ -165,4 +165,4 @@ WEATHER_API_KEY=tu_clave_de_api
 
 **Autor:** [Tania Salvatella]  
 **Repositorio:** [GitHub](https://github.com/TSalvatellaP/PruebatecnicaTechTronic)  
-**Despliegue:** [Enlace a la versión en vivo]
+**Despliegue:** [[Enlace a la versión en vivo](https://pruebatecnicatechtronic.onrender.com)]
