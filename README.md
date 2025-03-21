@@ -8,11 +8,18 @@ Este proyecto es una prueba técnica para el puesto de desarrollador web en Tech
 - **Backend:** Node.js, Express
 - **API externa:** OpenWeatherMap (para obtener información meteorológica)
 
+
 ## Objetivo
 
 El objetivo es desarrollar una página de aterrizaje que muestre los tres últimos artículos del blog de la compañía y un widget con la información meteorológica actual.
 
 ## Características principales
+* **Muestra información meteorológica actual:**
+    * Fecha y hora actual.
+    * Icono del clima.
+    * Condición meteorológica.
+    * Temperatura actual.
+    * Sensación térmica.
 * **Endpoint `/api/weather/:country/:city`:**
     * Obtiene información meteorológica para una ciudad y país específicos.
     * Utiliza la API de OpenWeatherMap para obtener los datos.
@@ -106,13 +113,16 @@ WEATHER_API_KEY=tu_clave_de_api
 
 ## Uso
 
-Para obtener información meteorológica, realiza una solicitud GET al siguiente endpoint:
-/api/weather/:country/:city
-```
-Reemplaza `:country` y `:city` con el código del país y el nombre de la ciudad, respectivamente.
+El flujo de uso es el siguiente:
 
-Ejemplo: /api/weather/es/madrid
-```
+1.  **Búsqueda de ciudad:** El usuario utiliza un buscador
+2.  **Solicitud a la API:** La aplicación toma el nombre de la ciudad introducido por el usuario y realiza una solicitud a tu API (`/api/weather/:country/:city`).
+3.  **Respuesta de la API:**
+    * **Caché:** El servidor verifica si la información meteorológica para esa ciudad y país ya está en el caché.
+        * Si está en el caché ("cache hit"), el servidor devuelve los datos almacenados en el caché directamente.
+        * Si no está en el caché ("cache miss"), el servidor realiza una solicitud a la API de OpenWeatherMap.
+    * **API de OpenWeatherMap:** Si es necesario, el servidor solicita la información meteorológica a la API de OpenWeatherMap.
+
 ## Mejoras
 
 * Validación de entrada para los parámetros de la URL.
