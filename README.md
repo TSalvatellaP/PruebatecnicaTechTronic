@@ -24,7 +24,7 @@ El objetivo es desarrollar una página de aterrizaje que muestre los tres últim
   - **Cajas de widgets** en el lado derecho (incluyendo el widget meteorológico).
 
   ### Estructura del proyecto
-  ```
+```
   blog-techtronic/
 ├── node_modules/
 ├── public/
@@ -58,7 +58,7 @@ El objetivo es desarrollar una página de aterrizaje que muestre los tres últim
 ├── package-lock.json
 ├── package.json
 └── vite.config.js
-```
+´´´
 
 ### Backend
 
