@@ -19,10 +19,46 @@ El objetivo es desarrollar una página de aterrizaje que muestre los tres últim
 - Implementado en **React** con estilos en **TailwindCSS**.
 - Diseño responsivo para adaptarse a cualquier dispositivo.
 - Componentes clave:
-  - **Encabezado fijo** en la parte superior con un menú de navegación.
   - **Menú hamburguesa** en versión móvil.
   - **Lista de artículos** con títulos y resúmenes.
   - **Cajas de widgets** en el lado derecho (incluyendo el widget meteorológico).
+
+  ### Estructura del proyecto
+  ´´´
+  blog-techtronic/
+├── node_modules/
+├── public/
+├── src/
+│   ├── assets/
+│   ├── components/
+│   │   ├── postList/
+│   │   │   ├── ArticleList.jsx
+│   │   │   └── Button.jsx
+│   │   ├── sidebar/
+│   │   │   └── Sidebar.jsx
+│   │   ├── widget/
+│   │   │   ├── Categories.jsx
+│   │   │   ├── SearchBox.jsx
+│   │   │   └── WeatherWidget.jsx
+│   │   ├── Footer.jsx
+│   │   └── Header.jsx
+│   ├── pages/
+│   │   └── Home.jsx
+│   ├── services/
+│   │   └── weatherApi.js
+│   ├── styles/
+│   │   └── App.scss
+│   ├── utils/
+│   │   └── getWeatherIcon.jsx
+│   ├── App.jsx
+│   └── main.jsx
+├── .gitignore
+├── eslint.config.js
+├── index.html
+├── package-lock.json
+├── package.json
+└── vite.config.js
+´´´
 
 ### Backend
 
