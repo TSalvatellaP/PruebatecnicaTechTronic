@@ -10,10 +10,11 @@ function useWeatherApi(country, city) {
     const fetchData = async () => {
       setLoading(true);
       setError(null);
+      const apiUrl = import.meta.env.VITE_URL_SERVER;
 
       try {
         const response = await fetch(
-          `http://localhost:3000/api/weather/${country}/${city}` 
+          `${apiUrl}/api/weather/${country}/${city}` 
         );
 
         if (!response.ok) {
