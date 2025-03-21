@@ -17,7 +17,8 @@
   "scripts": {
     "start": "node src/index.js",
     "dev": "nodemon -L index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "publish": "cd blog-techtronic && npm run build && cd .. && rm -rf ./src/public && mv ./blog-techtronic/dist ./src/public"
   },
   "dependencies": {
     "cors": "^2.8.5",
