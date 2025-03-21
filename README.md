@@ -83,7 +83,7 @@ El objetivo es desarrollar una página de aterrizaje que muestre los tres últim
 ### 3. Configurar variables de entorno
 Crear un archivo `.env` en la raíz del proyecto con la siguiente información:
 ```
-PORT=5000
+PORT=3000
 WEATHER_API_KEY=tu_api_key_de_openweathermap
 ```
 
