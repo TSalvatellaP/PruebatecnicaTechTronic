@@ -1,32 +1,38 @@
-import { useEffect, useState } from "react";
-
-const API_PATH = import.meta.env.PROD ? '/api/weather' : 'http://localhost:3000/api/weather';
+import { useState, useEffect } from 'react';
 
 function useWeatherApi(country, city) {
-    const [data, setData] = useState(null);
-    const [error, setError] = useState(null);
+  const [data, setData] = useState(null);
+  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(false);
 
-    useEffect(() =>{
-        setData(null);
-        setError(null);
+  useEffect(() => {
+    console.log('useWeatherApi:', country, city);
+    const fetchData = async () => {
+      setLoading(true);
+      setError(null);
 
-        const fetchWeather = async () => {
-            try {
-                const res = await fetch(`${API_PATH}/${country}/${city}/`);
-                const dataJson = await res.json();
+      try {
+        const response = await fetch(
+          `http://localhost:3000/api/weather/${country}/${city}` 
+        );
 
-                setData(dataJson);
-            }
-            catch(err) {
-                setError(err.toString());
-            }
-        };
+        if (!response.ok) {
+          throw new Error('No se pudo obtener la información meteorológica.');
+        }
 
-        fetchWeather();
-    }, [country, city]
-);
+        const result = await response.json();
+        setData(result);
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
 
-return{ data, error};
+    fetchData();
+  }, [city, country]); 
+
+  return { data, error, loading };
 }
 
 export default useWeatherApi;

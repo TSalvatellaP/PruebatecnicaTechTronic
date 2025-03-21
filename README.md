@@ -16,12 +16,16 @@ El objetivo es desarrollar una página de aterrizaje que muestre los tres últim
 * **Endpoint `/api/weather/:country/:city`:**
     * Obtiene información meteorológica para una ciudad y país específicos.
     * Utiliza la API de OpenWeatherMap para obtener los datos.
-    * Implementa un caché en memoria con `node-cache` para almacenar los resultados durante 10 minutos (configurable).
+    * Implementa un caché en memoria con `node-cache` para almacenar los resultados.
     * Devuelve los datos meteorológicos en formato JSON.
+* **Caché en memoria:**
+    * Utiliza `node-cache` para almacenar los datos meteorológicos en caché.
+    * El TTL (Time To Live) del caché es configurable (actualmente 1 minuto).
+    * Mejora el rendimiento al reducir la cantidad de solicitudes a la API de OpenWeatherMap.
 * **CORS habilitado:** Permite solicitudes desde diferentes dominios.
 * **Manejo de variables de entorno:** Utiliza `.env` para almacenar la clave de API de OpenWeatherMap.
-* **Manejo básico de errores:** Incluye un bloque `try...catch` para manejar errores durante las solicitudes a la API.
-
+* **Manejo de errores mejorado:** Incluye manejo de errores con códigos de estado HTTP específicos y mensajes de error detallados.
+* **Formato de datos:** La función `clearRecord` formatea los datos de la API para que sean más fáciles de usar.
 
 ### Frontend
 
@@ -109,7 +113,17 @@ Reemplaza `:country` y `:city` con el código del país y el nombre de la ciudad
 
 Ejemplo: /api/weather/es/madrid
 ```
+## Mejoras
 
+* Validación de entrada para los parámetros de la URL.
+* Registro de errores más detallado.
+* Monitorización del rendimiento del caché.
+* Documentación detallada de la API.
+* Seguridad: Asegurarse de que las variables de entorno estén protegidas.
+* Pruebas unitarias y de integración.
+* Implementación de un caché distribuido (e.g., Redis).
+* Implementación de lógica de invalidación del caché.
+* Ajuste dinámico del TTL basado en métricas de monitorización.
 
 
 ---

@@ -14,8 +14,7 @@ server.listen(serverPort, () => {
 });
 
 // Inicializa el caché
-const weatherCache = new NodeCache({ stdTTL: 600 }); // TTL de 10 minutos (600 segundos)
-
+const weatherCache = new NodeCache({ stdTTL: 600 }); 
 function clearRecord(json) {
   return {
     weather: json.weather[0].main,

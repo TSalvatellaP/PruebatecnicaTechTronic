@@ -1,9 +1,10 @@
 import React from 'react';
-import PropTypes from "prop-types";
-import useWeatherApi from "../../../services/weatherApi";
-import getWeatherIcon from "../../../utils/getWeatherIcon";
+import PropTypes from 'prop-types';
+import useWeatherApi from '../../../services/weatherApi';
+import getWeatherIcon from '../../../utils/getWeatherIcon';
 
-function Weather({ country = "es", city = "Madrid" }) {
+function WeatherWidget({ country, city }) {
+  console.log('Ciudad recibida en Weather:', city);
   const { data, error, loading } = useWeatherApi(country, city);
 
   if (loading) return <p className="text-white text-center">Cargando...</p>;
@@ -56,9 +57,9 @@ function Weather({ country = "es", city = "Madrid" }) {
   );
 }
 
-Weather.propTypes = {
+WeatherWidget.propTypes = {
   country: PropTypes.string,
   city: PropTypes.string
 };
 
-export default Weather;
+export default WeatherWidget;
