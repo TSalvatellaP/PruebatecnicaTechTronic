@@ -13,6 +13,15 @@ Este proyecto es una prueba técnica para el puesto de desarrollador web en Tech
 El objetivo es desarrollar una página de aterrizaje que muestre los tres últimos artículos del blog de la compañía y un widget con la información meteorológica actual.
 
 ## Características principales
+* **Endpoint `/api/weather/:country/:city`:**
+    * Obtiene información meteorológica para una ciudad y país específicos.
+    * Utiliza la API de OpenWeatherMap para obtener los datos.
+    * Implementa un caché en memoria con `node-cache` para almacenar los resultados durante 10 minutos (configurable).
+    * Devuelve los datos meteorológicos en formato JSON.
+* **CORS habilitado:** Permite solicitudes desde diferentes dominios.
+* **Manejo de variables de entorno:** Utiliza `.env` para almacenar la clave de API de OpenWeatherMap.
+* **Manejo básico de errores:** Incluye un bloque `try...catch` para manejar errores durante las solicitudes a la API.
+
 
 ### Frontend
 
@@ -83,8 +92,7 @@ El objetivo es desarrollar una página de aterrizaje que muestre los tres últim
 ### 3. Configurar variables de entorno
 Crear un archivo `.env` en la raíz del proyecto con la siguiente información:
 ```
-PORT=3000
-WEATHER_API_KEY=tu_api_key_de_openweathermap
+WEATHER_API_KEY=tu_clave_de_api
 ```
 
 ### 4. Ejecutar el servidor
@@ -92,11 +100,17 @@ WEATHER_API_KEY=tu_api_key_de_openweathermap
  npm start
 ```
 
-## Notas adicionales
+## Uso
 
-- No es necesario enlazar los títulos de los posts a otras páginas.
-- No se requiere utilizar imágenes o textos reales.
-- Se prioriza la funcionalidad sobre la apariencia estética.
+Para obtener información meteorológica, realiza una solicitud GET al siguiente endpoint:
+/api/weather/:country/:city
+```
+Reemplaza `:country` y `:city` con el código del país y el nombre de la ciudad, respectivamente.
+
+Ejemplo: /api/weather/es/madrid
+```
+
+
 
 ---
 
