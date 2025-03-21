@@ -72,7 +72,7 @@ El objetivo es desarrollar una página de aterrizaje que muestre los tres últim
 ### 1. Clonar el repositorio
 ```bash
  git clone https://github.com/TSalvatellaP/PruebatecnicaTechTronic.git
- cd techtronic-blog
+ cd blog-techtronic
 ```
 
 ### 2. Instalar dependencias
