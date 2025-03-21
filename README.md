@@ -58,7 +58,7 @@ El objetivo es desarrollar una página de aterrizaje que muestre los tres últim
 ├── package-lock.json
 ├── package.json
 └── vite.config.js
-´´´
+```
 
 ### Backend
 
