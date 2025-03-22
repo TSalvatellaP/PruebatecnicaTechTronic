@@ -8,8 +8,7 @@ export default defineConfig({
     react(), 
     tailwindcss()
   ],
-  base: "/PruebatecnicaTechTronic",
-  server: {
+    server: {
     watch: {
       usePolling: true,
     },
