@@ -11,9 +11,9 @@ server.use(express.json());
 
 server.use(express.static(path.join(__dirname, 'public')));
 
-const PORT = "https://pruebatecnicatechtronic.onrender.com/"; 
-server.listen(PORT, () => {
-  console.log(`Server listening at port ${PORT}`);
+const serverPort = process.env.PORT; 
+server.listen(serverPort, () => {
+  console.log(`Server listening at port ${serverPort}`);
 });
 
 
