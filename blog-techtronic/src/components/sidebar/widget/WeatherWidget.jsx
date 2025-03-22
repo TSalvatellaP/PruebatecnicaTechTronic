@@ -3,6 +3,9 @@ import PropTypes from 'prop-types';
 import useWeatherApi from '../../../services/weatherApi';
 import getWeatherIcon from '../../../utils/getWeatherIcon';
 
+
+
+
 function WeatherWidget({ country, city }) {
   console.log('Ciudad recibida en Weather:', city);
   const { data, error, loading } = useWeatherApi(country, city);
@@ -11,8 +14,8 @@ function WeatherWidget({ country, city }) {
   if (error) return <p className="text-red-500 text-center">Error al cargar el clima</p>;
 
   // Mapeo de datos para clima actual
-  const currentWeather = data || {}; // Usa data directamente
-  const forecast = []; // No hay previsión en la respuesta que proporcionaste
+  const currentWeather = data || {}; 
+
 
   return (
     <div className="px-6 pt-6">
@@ -36,7 +39,8 @@ function WeatherWidget({ country, city }) {
             <strong className="text-lg font-light">{currentWeather.temp_feels_like || "23"}º</strong>
           </section>
         </section>
-        </div>
+        <p className="text-center text-sm mt-4">Ciudad: {city.toUpperCase()}</p> 
+      </div>
     </div>
   );
 }

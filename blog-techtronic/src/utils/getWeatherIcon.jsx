@@ -34,7 +34,7 @@ const getWeatherIcon = (condition) => {
     return <WiFog className="w-8 h-8" />
   }
 
-  return <WiDaySunny className="w-8 h-8" /> // Icono por defecto
+  return <WiDaySunny className="w-8 h-8" /> 
 };
 
 export default getWeatherIcon;
