@@ -2,15 +2,21 @@ const express = require('express');
 const cors = require('cors');
 require('dotenv').config();
 const NodeCache = require('node-cache');
+const path = require('path');
 
 const server = express();
 server.use(cors());
 server.use(express.json());
 
-const serverPort = process.env.PORT || 3000;
+
+server.use(express.static(path.join(__dirname, 'public')));
+
+const serverPort = process.env.PORT || 3000; 
 server.listen(serverPort, () => {
   console.log(`Server listening at port ${serverPort}`);
 });
+
+
 
 // Inicializa el caché con un TTL configurable
 const CACHE_TTL = process.env.CACHE_TTL || 600; // 10 minutos por defecto

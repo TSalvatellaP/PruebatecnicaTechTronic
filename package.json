@@ -16,7 +16,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node src/index.js",
-    "dev": "nodemon -L index.js",
+    "dev": "nodemon -L src/index.js",
     "test": "cross-env NODE_ENV=test jest --verbose --runInBand",
     "publish": "cd blog-techtronic && npm run build && cd .. && rm -rf ./src/public && mv ./blog-techtronic/dist ./src/public"
   },
