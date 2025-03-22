@@ -7,7 +7,7 @@ import getWeatherIcon from '../../../utils/getWeatherIcon';
 
 
 function WeatherWidget({ country, city }) {
-  console.log('Ciudad recibida en Weather:', city);
+  
   const { data, error, loading } = useWeatherApi(country, city);
 
   if (loading) return <p className="text-white text-center">Cargando...</p>;
