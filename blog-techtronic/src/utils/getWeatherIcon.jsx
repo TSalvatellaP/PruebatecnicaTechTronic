@@ -27,7 +27,7 @@ const getWeatherIcon = (condition) => {
 
   const translatedCondition = Object.keys(translations).find(key => conditionLower.includes(key))
     ? translations[Object.keys(translations).find(key => conditionLower.includes(key))]
-    : conditionLower; // Mantener el original si no hay traducción.
+    : conditionLower; 
 
   if (translatedCondition === "soleado" || translatedCondition === "despejado") {
     return <WiDaySunny className="w-8 h-8" />;
@@ -51,7 +51,7 @@ const getWeatherIcon = (condition) => {
     return <WiFog className="w-8 h-8" />;
   }
 
-  return <WiDaySunny className="w-8 h-8" />; // Valor por defecto
+  return <WiDaySunny className="w-8 h-8" />; 
 };
 
 export default getWeatherIcon;

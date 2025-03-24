@@ -17,9 +17,10 @@
   "scripts": {
     "start": "node src/index.js",
     "dev": "nodemon -L src/index.js",
-    "test": "cross-env NODE_ENV=test jest --verbose --runInBand",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "publish": "cd blog-techtronic && npm run build && cd .. && rm -rf ./src/public && mv ./blog-techtronic/dist ./src/public"
   },
+
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
@@ -28,8 +29,15 @@
     "node-fetch": "^3.3.2"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.26.9",
+    "@babel/preset-react": "^7.26.3",
+    "@testing-library/react": "^16.2.0",
+    "babel-jest": "^29.7.0",
     "cross-env": "^7.0.3",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
     "nodemon": "^3.1.9",
+    "react-test-renderer": "^19.0.0",
     "supertest": "^7.1.0"
   }
 }

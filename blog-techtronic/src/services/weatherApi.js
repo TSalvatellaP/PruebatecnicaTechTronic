@@ -16,7 +16,7 @@ function useWeatherApi(country, city) {
     const fetchData = async () => {
       setLoading(true);
       setError(null);
-      const apiUrl = import.meta.env.VITE_URL_SERVER;
+      const apiUrl = process.env.VITE_URL_SERVER || import.meta.env?.VITE_URL_SERVER;
 
       try {
         const response = await fetch(`${apiUrl}/api/weather/${country}/${city}`, { signal });
