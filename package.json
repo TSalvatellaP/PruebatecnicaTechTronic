@@ -15,12 +15,15 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "start": "node src/index.js",
-    "dev": "nodemon -L src/index.js",
+    "start": "NODE_ENV=production node src/index.js",
+    "dev": "NODE_ENV=development nodemon src/index.js",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "test": "NODE_ENV=test jest --verbose --runInBand",
     "publish": "cd blog-techtronic && npm run build && cd .. && rm -rf ./src/public && mv ./blog-techtronic/dist ./src/public"
   },
-
+  "jest": {
+    "testEnvironment": "node"
+  },
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
